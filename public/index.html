@@ -1,40 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="index.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yamaha RAS 13 Remote</title>
 </head>
 <body>
     <h1>Yamaha RAS13 Remote</h1>
-        <button onclick="buttonHandler(this)" name="CD_POWER">CD Power</button>
-        <button onclick="buttonHandler(this)" name="NEXT">Next Track</button>
-        <button onclick="buttonHandler(this)" name="PREV">Previous Track</button>
-        <button onclick="buttonHandler(this)" name="PLAY">Play</button>
-        <button onclick="buttonHandler(this)" name="PAUSE">Pause</button>
-        <button onclick="buttonHandler(this)" name="STOP">Stop</button>
-        <button onclick="buttonHandler(this)" name="FORWARD">Forward</button>
-        <button onclick="buttonHandler(this)" name="REWIND">Rewind</button>
-        <button onclick="buttonHandler(this)" name="LINE1">Line 1</button>
-        <button onclick="buttonHandler(this)" name="LINE2">Line 2</button>
-        <button onclick="buttonHandler(this)" name="LINE3">Line 3</button>
-        <button onclick="buttonHandler(this)" name="OPTICAL">Optical</button>
-        <button onclick="buttonHandler(this)" name="COAXIAL">Coaxial</button>
-        <button onclick="buttonHandler(this)" name="TUNER">Tuner</button>
-        <button onclick="buttonHandler(this)" name="PHONO">Phono</button>
-        <button onclick="buttonHandler(this)" name="VOLUMEUP">Volume Up</button>
-        <button onclick="buttonHandler(this)" name="VOLUMEDOWN">Volume Down</button>
-        <button onclick="buttonHandler(this)" name="CD">CD Input</button>
-        <button onclick="buttonHandler(this)" name="STANDBY">Power On/Off</button>
+    <div class="volume">
+        <h3>Volume Controls</h3>
+        <button class="volume" ontouchstart="holdHandler(this, true)" ontouchend="holdHandler(this, false)" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)" name="VOLUMEUP">Volume Up</button>
+        <button class="volume" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)" name="VOLUMEDOWN">Volume Down</button>
+        <button class="volume" onclick="buttonHandler(this)" name="MUTE">Mute</button>
+    </div>
+    
+    <div class="input">
+        <h3>Input Selector</h3>
+        <button class="input" onclick="buttonHandler(this)" name="LINE1">Line 1</button>
+        <button class="input" onclick="buttonHandler(this)" name="LINE2">Line 2</button>
+        <button class="input" onclick="buttonHandler(this)" name="LINE3">Line 3</button>
+        <button class="input" onclick="buttonHandler(this)" name="CD">CD Input</button>
+        <button class="input" onclick="buttonHandler(this)" name="OPTICAL">Optical</button>
+        <button class="input" onclick="buttonHandler(this)" name="COAXIAL">Coaxial</button>
+        <button class="input" onclick="buttonHandler(this)" name="TUNER">Tuner</button>
+        <button class="input" onclick="buttonHandler(this)" name="PHONO">Phono</button>
+    </div>
+    <div class="cd">
+        <h3>CD</h3>
+        <!-- <button class="cd" onclick="buttonHandler(this)" name="CD_POWER">CD Power</button> -->
+        <button class="cd" onclick="buttonHandler(this)" name="PLAY">Play</button>
+        <button class="cd" onclick="buttonHandler(this)" name="PAUSE">Pause</button>
+        <button class="cd" onclick="buttonHandler(this)" name="STOP">Stop</button>
+        <button class="cd" onclick="buttonHandler(this)" name="NEXT">Next Track</button>
+        <button class="cd" onclick="buttonHandler(this)" name="PREV">Previous Track</button>
+        <button class="cd" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)"  onclick="buttonHandler(this)" name="FORWARD">Forward</button>
+        <button class="cd" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)" onclick="buttonHandler(this)" name="REWIND">Rewind</button>
+    </div>
+    <div class="power">
+        <h3>Power</h3>
+        <button class="power" onclick="buttonHandler(this)" name="STANDBY">Power On/Off</button>
+    </div>
+
 </body>
 </html>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>    
-    const baseAPIURL = "http://192.168.1.221:5002/remote/"
+    const baseRemoteAPIURL = "http://spango.asuscomm.com:1234/"
     function buttonHandler(e) {
-        axios.get(baseAPIURL + e.name).then(response => {
+        axios.get(baseRemoteAPIURL + "remote/" + e.name).then(response => {
             console.log(response);
+        }).catch(e => {
+            console.log(e);
+        })
+    }
+
+    function holdHandler(e, toggle) {
+        console.log("HOLDHANDLER")
+        console.log(baseRemoteAPIURL + "remote/" + e.name + (toggle ? "/start" : "/stop"))
+
+        axios.get(baseRemoteAPIURL + "remote/" + e.name + (toggle ? "/start" : "/stop")).then(response => {
+        console.log(response);
+        }).catch(e => {
+            console.log(e);
         })
     }
 </script> 

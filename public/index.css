@@ -1,0 +1,48 @@
+button {
+    /* background-color: #4CAF50; Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin: 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+div {
+    margin: 1rem;
+    width: 60%;
+    padding: 0.5rem;
+    background-color: rgb(221, 221, 221);
+}
+
+.cd {
+}
+.cd button {
+    background-color: #555555;
+}
+
+.input {
+}
+.input button {
+    background-color: #008CBA;
+
+}
+
+.volume {
+
+}
+
+.volume button {
+    background-color: #4CAF50;
+
+}
+
+.power {
+
+}
+
+.power button {
+    background-color: #f44336;
+
+}
