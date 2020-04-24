@@ -1,0 +1,14 @@
+- baseAPIURL = "http://192.168.1.221:5002/remote/"
+
+doctype html
+html
+    head
+        title Yamaha RAS13 Remote
+    body
+        p.greetings#people Hello!
+
+        p
+            a(href=baseAPIURL + "CD_POWER") CD Power
+        p
+            a(href=baseAPIURL + "MUTE") Mute
+        
