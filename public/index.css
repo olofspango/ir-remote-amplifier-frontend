@@ -1,3 +1,10 @@
+p {
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+
+}
 button {
     /* background-color: #4CAF50; Green */
     border: none;
@@ -20,6 +27,7 @@ div {
 }
 .cd button {
     background-color: #555555;
+
 }
 
 .input {
