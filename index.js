@@ -9,7 +9,7 @@ app.use(express.static('public'))
 app.use(cors());
 
 
-const remoteAPIURL = "http://192.168.1.221:5002/remote/"
+const remoteAPIURL = "http://localhost:5002/remote/"
 
 app.get('/remote/:command/:repeat', (req,res) => {
     axios.get(remoteAPIURL + req.params.command + "/" + req.params.repeat).then(response => {
