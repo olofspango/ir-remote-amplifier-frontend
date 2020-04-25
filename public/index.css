@@ -1,23 +1,25 @@
-p {
-    -webkit-user-select: none; /* Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+/Edge */
-    user-select: none; /* Standard */
-
+body {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
 }
+
 button {
     /* background-color: #4CAF50; Green */
     border: none;
+    border-radius: 10px;
     color: white;
     padding: 15px 32px;
+    min-width: 14rem;
     margin: 3px;
     text-align: center;
+    text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
 }
 div {
     margin: 1rem;
+    border-radius: 10px;
     width: 60%;
     padding: 0.5rem;
     background-color: rgb(221, 221, 221);

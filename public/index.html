@@ -3,26 +3,29 @@
 <head>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" type="text/css" href="index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.materialdesignicons.com/5.1.45/css/materialdesignicons.min.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yamaha RAS 13 Remote</title>
 </head>
 <body>
-    <h1>Yamaha RAS13 Remote</h1>
+    <h1>Yamaha RAS13 Remote</h1>    
     <div class="volume">
         <h3>Volume Controls</h3>
-        <button class="volume" ontouchstart="holdHandler(this, true)" ontouchend="holdHandler(this, false)" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)" name="VOLUMEUP">Volume Up</button>
-        <button class="volume" ontouchstart="holdHandler(this, true)" ontouchend="holdHandler(this, false)" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)" name="VOLUMEDOWN">Volume Down</button>
-        <button class="volume" onclick="buttonHandler(this)" name="MUTE">Mute</button>
+        <button class="volume mdi mdi-volume-plus" ontouchstart="holdHandler(this, true)" ontouchend="holdHandler(this, false)" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)" name="VOLUMEUP">Volume Up</button>
+        <button class="volume mdi mdi-volume-minus" ontouchstart="holdHandler(this, true)" ontouchend="holdHandler(this, false)" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)" name="VOLUMEDOWN">Volume Down</button>
+        <button class="volume mdi mdi-volume-mute" onclick="buttonHandler(this)" name="MUTE">Mute</button>
     </div>
     
     <div class="input">
         <h3>Input Selector</h3>
-        <button class="input" onclick="buttonHandler(this)" name="LINE1">TV</button>
+
+        <button class="input mdi mdi-television-classic" onclick="buttonHandler(this)" name="LINE1">TV</button>
         <!-- <button class="input" onclick="buttonHandler(this)" name="LINE2">Line 2</button>
         <button class="input" onclick="buttonHandler(this)" name="LINE3">Line 3</button> -->
-        <button class="input" onclick="buttonHandler(this)" name="CD">CD Input</button>
-        <button class="input" onclick="buttonHandler(this)" name="OPTICAL">Chromecast</button>
+        <button class="input mdi mdi-disc" onclick="buttonHandler(this)" name="CD">CD</button>
+        <button class="input mdi mdi-google-chrome" onclick="buttonHandler(this)" name="OPTICAL"> Chromecast </button>
         <!-- <button class="input" onclick="buttonHandler(this)" name="COAXIAL">Coaxial</button>
         <button class="input" onclick="buttonHandler(this)" name="TUNER">Tuner</button>
         <button class="input" onclick="buttonHandler(this)" name="PHONO">Phono</button> -->
@@ -30,13 +33,17 @@
     <div class="cd">
         <h3>CD</h3>
         <!-- <button class="cd" onclick="buttonHandler(this)" name="CD_POWER">CD Power</button> -->
-        <button class="cd" onclick="buttonHandler(this)" name="PLAY">Play</button>
-        <button class="cd" onclick="buttonHandler(this)" name="PAUSE">Pause</button>
-        <button class="cd" onclick="buttonHandler(this)" name="STOP">Stop</button>
-        <button class="cd" onclick="buttonHandler(this)" name="NEXT">Next Track</button>
-        <button class="cd" onclick="buttonHandler(this)" name="PREV">Previous Track</button>
-        <button class="cd" ontouchstart="holdHandler(this, true)" ontouchend="holdHandler(this, false)" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)"name="FORWARD">Forward</button>
-        <button class="cd" ontouchstart="holdHandler(this, true)" ontouchend="holdHandler(this, false)" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)"name="REWIND">Rewind</button>
+        <div>
+            <button class="cd mdi mdi-play" onclick="buttonHandler(this)" name="PLAY"></button>
+            <button class="cd mdi mdi-pause" onclick="buttonHandler(this)" name="PAUSE"></button>
+            <button class="cd mdi mdi-stop" onclick="buttonHandler(this)" name="STOP"></button>
+        </div>
+        <div>
+            <button class="cd mdi mdi-skip-backward" onclick="buttonHandler(this)" name="PREV"></button>
+            <button class="cd mdi mdi-rewind" ontouchstart="holdHandler(this, true)" ontouchend="holdHandler(this, false)" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)"name="REWIND"></button>
+            <button class="cd mdi mdi-fast-forward" ontouchstart="holdHandler(this, true)" ontouchend="holdHandler(this, false)" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)"name="FORWARD"></button>
+            <button class="cd mdi mdi-skip-forward" onclick="buttonHandler(this)" name="NEXT"></button>
+        </div>
     </div>
     <div class="power">
         <h3>Power</h3>
