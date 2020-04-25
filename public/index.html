@@ -7,18 +7,18 @@
     <link href="https://cdn.materialdesignicons.com/5.1.45/css/materialdesignicons.min.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yamaha RAS 13 Remote</title>
+    <title>Remote</title>
 </head>
 <body>
     <h1>Yamaha RAS13 Remote</h1>    
-    <div class="volume">
+    <div class="volume container">
         <h3>Volume Controls</h3>
         <button class="volume mdi mdi-volume-plus" ontouchstart="holdHandler(this, true)" ontouchend="holdHandler(this, false)" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)" name="VOLUMEUP">Volume Up</button>
         <button class="volume mdi mdi-volume-minus" ontouchstart="holdHandler(this, true)" ontouchend="holdHandler(this, false)" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)" name="VOLUMEDOWN">Volume Down</button>
         <button class="volume mdi mdi-volume-mute" onclick="buttonHandler(this)" name="MUTE">Mute</button>
     </div>
     
-    <div class="input">
+    <div class="input container">
         <h3>Input Selector</h3>
 
         <button class="input mdi mdi-television-classic" onclick="buttonHandler(this)" name="LINE1">TV</button>
@@ -30,22 +30,22 @@
         <button class="input" onclick="buttonHandler(this)" name="TUNER">Tuner</button>
         <button class="input" onclick="buttonHandler(this)" name="PHONO">Phono</button> -->
     </div>
-    <div class="cd">
+    <div class="cd container">
         <h3>CD</h3>
         <!-- <button class="cd" onclick="buttonHandler(this)" name="CD_POWER">CD Power</button> -->
-        <div>
+        <div class="cdcontrols">
             <button class="cd mdi mdi-play" onclick="buttonHandler(this)" name="PLAY"></button>
             <button class="cd mdi mdi-pause" onclick="buttonHandler(this)" name="PAUSE"></button>
             <button class="cd mdi mdi-stop" onclick="buttonHandler(this)" name="STOP"></button>
         </div>
-        <div>
+        <div class="cdcontrols">
             <button class="cd mdi mdi-skip-backward" onclick="buttonHandler(this)" name="PREV"></button>
             <button class="cd mdi mdi-rewind" ontouchstart="holdHandler(this, true)" ontouchend="holdHandler(this, false)" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)"name="REWIND"></button>
             <button class="cd mdi mdi-fast-forward" ontouchstart="holdHandler(this, true)" ontouchend="holdHandler(this, false)" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)"name="FORWARD"></button>
             <button class="cd mdi mdi-skip-forward" onclick="buttonHandler(this)" name="NEXT"></button>
         </div>
     </div>
-    <div class="power">
+    <div class="power container">
         <h3>Power</h3>
         <button class="power mdi mdi-power-standby" onclick="buttonHandler(this)" name="STANDBY">Amplifier</button>
         <button class="power mdi mdi-power-standby" onclick="buttonHandler(this)" name="SONY_POWER">TV</button>

@@ -22,10 +22,16 @@ button {
     display: inline-block;
     font-size: 16px;
 }
-div {
+div.cdcontrols {
+    width: max-content;
+}
+
+div.container {
     margin: 1rem;
     border-radius: 10px;
-    width: 60%;
+    min-width: min-content;
+    width: fit-content;
+    
     padding: 0.5rem;
     background-color: rgb(221, 221, 221);
 }
@@ -59,5 +65,11 @@ div {
 
 .power button {
     background-color: #f44336;
+
+}
+
+@media 
+
+@media only screen and (max-width: 600 px) {
 
 }
