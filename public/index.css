@@ -3,6 +3,11 @@ body {
     font-weight: 700;
 }
 
+h3 {
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+
 button {
     /* background-color: #4CAF50; Green */
     border: none;
@@ -29,7 +34,7 @@ div {
 }
 .cd button {
     background-color: #555555;
-
+    min-width: 5rem;
 }
 
 .input {
