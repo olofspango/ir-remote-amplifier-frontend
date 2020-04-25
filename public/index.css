@@ -23,17 +23,24 @@ button {
     font-size: 16px;
 }
 div.cdcontrols {
+    margin: auto;
     width: max-content;
 }
+
+div.main {
+    margin: auto;
+    text-align: center;
+    width: 800px;
+}
+
 
 div.container {
     margin: 1rem;
     border-radius: 10px;
-    min-width: min-content;
-    width: fit-content;
+    width: 700px;
     
     padding: 0.5rem;
-    background-color: rgb(221, 221, 221);
+    /* background-color: rgb(221, 221, 221); */
 }
 
 .cd {
@@ -68,8 +75,18 @@ div.container {
 
 }
 
-@media 
+@media only screen and (max-width: 800px) {
+    div.cdcontrols {
+        width: auto;
+    }
+    div.main {
+        width: 90%;
+    }
+    div.container {
+        width: 100%;
+    }
 
-@media only screen and (max-width: 600 px) {
-
+    h1 {
+        font-size: 2rem;
+    }
 }
