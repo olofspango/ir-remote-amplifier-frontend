@@ -1,5 +1,5 @@
 # ir-remote-amplifier-frontend
-This repo contains the python code used to receive commands from front-end component, and send the relevant IR-code and command to the Arduino.
+This repo contains the Node JS code to power the front-end UI for the IR Remote application.
 
 ## Related Repo's
 [Py-IR-Remote-Amplifier Repo](https://github.com/olofspango/py-ir-remote-amplifier) - The code that runs on the raspberry pi to send commands to arduino
