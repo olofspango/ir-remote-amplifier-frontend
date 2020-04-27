@@ -105,13 +105,22 @@ div.container {
 .blank {
     background-color: transparent !important;
 }
-
+.center {
+    margin: auto;
+}
 .column {
     float: left;
-    width: 33%;
+    width: min-content;
 }
+
+.row {
+    width: fit-content;
+    margin: auto;
+}
+
 .row:after {
     content: "";
+
     display: table;
     clear: both;
 }
