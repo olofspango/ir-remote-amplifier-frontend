@@ -61,27 +61,25 @@ div.container {
     min-width: 5rem;
 }
 
-
-
-.input {
+.tv button {
+    background-color: #55286F;
 }
+.small {
+    min-width: 5rem;
+}
+
+
 .input button {
     background-color: #008CBA;
 
 }
 
-.volume {
-
-}
 
 .volume button {
     background-color: #4CAF50;
 
 }
 
-.power {
-
-}
 
 .power button {
     background-color: #f44336;
@@ -102,4 +100,18 @@ div.container {
     h1 {
         font-size: 2rem;
     }
+}
+
+.blank {
+    background-color: transparent !important;
+}
+
+.column {
+    float: left;
+    width: 33%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
