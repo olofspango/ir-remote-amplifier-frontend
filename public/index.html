@@ -11,12 +11,12 @@
 </head>
 <body>
     <div class="main">
-        <h1>Yamaha RAS13 Remote</h1>    
+        <h1>IR Remote</h1>    
         <div class="volume container">
             <h3>Volume Controls</h3>
-            <button class="volume mdi mdi-volume-plus" ontouchstart="holdHandler(this, true)" ontouchend="holdHandler(this, false)" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)" name="VOLUMEUP">Volume Up</button>
-            <button class="volume mdi mdi-volume-minus" ontouchstart="holdHandler(this, true)" ontouchend="holdHandler(this, false)" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)" name="VOLUMEDOWN">Volume Down</button>
-            <button class="volume mdi mdi-volume-mute" onclick="buttonHandler(this)" name="MUTE">Mute</button>
+            <button class="volume mdi mdi-volume-minus b" ontouchstart="holdHandler(this, true)" ontouchend="holdHandler(this, false)" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)" name="VOLUMEDOWN">Volume Down</button>
+            <button class="volume mdi mdi-volume-plus a" ontouchstart="holdHandler(this, true)" ontouchend="holdHandler(this, false)" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)" name="VOLUMEUP">Volume Up</button>
+            <button class="volume mdi mdi-volume-mute c" onclick="buttonHandler(this)" name="MUTE">Mute</button>
         </div>
         
         <div class="input container">
@@ -51,9 +51,9 @@
             <button class="tv mdi mdi-menu" onclick="buttonHandler(this)" name="SONY_ACTIONMENU">ActionMenu</button>            
             <button class="tv mdi mdi-import" onclick="buttonHandler(this)" name="SONY_INPUT">Input</button>
                 <div class="row">
-                    <div class="column"><button class="tv small blank"></button></div>
+                    <div class="column"><button class="tv small mdi mdi-undo" onclick="buttonHandler(this)" name="SONY_BACK"></button></div>
                     <div class="column"><button class="tv small mdi mdi-menu-up" onclick="buttonHandler(this)" name="SONY_UP"></button></div>
-                    <div class="column"><button class="tv small blank"></button></div>
+                    <div class="column"><button class="tv small mdi mdi-home" onclick="buttonHandler(this)" name="SONY_HOME"></button></div>
                 </div>
                 <div class="row">
                     <div class="column"><button class="tv small mdi mdi-menu-left" onclick="buttonHandler(this)" name="SONY_LEFT"></button></div>
@@ -61,9 +61,9 @@
                     <div class="column"><button class="tv small mdi mdi-menu-right" onclick="buttonHandler(this)" name="SONY_RIGHT"></button></div>
                 </div>
                 <div class="row">
-                    <div class="column"><button class="tv small blank"></button></div>
+                    <div class="column"><button class="tv small mdi mdi-skip-backward" onclick="buttonHandler(this)" name="SONY_PREVIOUS" ></button></div>
                     <div class="column"><button class="tv small mdi mdi-menu-down" onclick="buttonHandler(this)" name="SONY_DOWN"></button></div>
-                    <div class="column"><button class="tv small blank"></button></div>
+                    <div class="column"><button class="tv small mdi mdi-skip-forward" onclick="buttonHandler(this)" name="SONY_NEXT"></button></div>
                 </div>
                 
                 
