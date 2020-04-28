@@ -14,8 +14,8 @@
         <h1>IR Remote</h1>    
         <div class="volume container">
             <h3>Volume Controls</h3>
-            <button class="volume mdi mdi-volume-minus b" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)" name="VOLUMEDOWN">Volume Down</button>
-            <button class="volume mdi mdi-volume-plus a" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)" name="VOLUMEUP">Volume Up</button>
+            <button class="volume mdi mdi-volume-minus b" ontouchstart="holdHandler(this, true)" ontouchend="holdHandler(this, false)" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)" name="VOLUMEDOWN">Volume Down</button>
+            <button class="volume mdi mdi-volume-plus a" ontouchstart="holdHandler(this, true)" ontouchend="holdHandler(this, false)" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)" name="VOLUMEUP">Volume Up</button>
             <button class="volume mdi mdi-volume-mute c" onclick="buttonHandler(this)" name="MUTE">Mute</button>
         </div>
         
@@ -41,8 +41,8 @@
             </div>
             <div class="cdcontrols">
                 <button class="cd mdi mdi-skip-backward" onclick="buttonHandler(this)" name="PREV"></button>
-                <button class="cd mdi mdi-rewind" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)"name="REWIND"></button>
-                <button class="cd mdi mdi-fast-forward" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)"name="FORWARD"></button>
+                <button class="cd mdi mdi-rewind" ontouchstart="holdHandler(this, true)" ontouchend="holdHandler(this, false)" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)"name="REWIND"></button>
+                <button class="cd mdi mdi-fast-forward" ontouchstart="holdHandler(this, true)" ontouchend="holdHandler(this, false)" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)"name="FORWARD"></button>
                 <button class="cd mdi mdi-skip-forward" onclick="buttonHandler(this)" name="NEXT"></button>
             </div>
         </div>
@@ -99,6 +99,7 @@
     }
 
     function holdHandler(e, toggle) {
+        e.preventDefault();
         console.log("HOLDHANDLER")
         console.log("/remote/" + e.name + (toggle ? "/start" : "/stop"))
 
