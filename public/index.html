@@ -14,56 +14,56 @@
         <h1>IR Remote</h1>    
         <div class="volume container">
             <h3>Volume Controls</h3>
-            <button class="volume mdi mdi-volume-minus b" ontouchstart="holdHandler(this, true)" ontouchend="holdHandler(this, false)" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)" name="VOLUMEDOWN">Volume Down</button>
-            <button class="volume mdi mdi-volume-plus a" ontouchstart="holdHandler(this, true)" ontouchend="holdHandler(this, false)" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)" name="VOLUMEUP">Volume Up</button>
-            <button class="volume mdi mdi-volume-mute c" onclick="buttonHandler(this)" name="MUTE">Mute</button>
+            <button class="volume mdi mdi-volume-minus holdevent b" name="VOLUMEDOWN">Volume Down</button>
+            <button class="volume mdi mdi-volume-plus holdevent a" name="VOLUMEUP">Volume Up</button>
+            <button class="volume mdi mdi-volume-mute c" name="MUTE">Mute</button>
         </div>
         
         <div class="input container">
             <h3>Input Selector</h3>
     
-            <button class="input mdi mdi-television-classic" onclick="buttonHandler(this)" name="LINE1">TV</button>
-            <!-- <button class="input" onclick="buttonHandler(this)" name="LINE2">Line 2</button>
-            <button class="input" onclick="buttonHandler(this)" name="LINE3">Line 3</button> -->
-            <button class="input mdi mdi-disc" onclick="buttonHandler(this)" name="CD">CD</button>
-            <button class="input mdi mdi-google-chrome" onclick="buttonHandler(this)" name="OPTICAL"> Chromecast </button>
-            <!-- <button class="input" onclick="buttonHandler(this)" name="COAXIAL">Coaxial</button>
-            <button class="input" onclick="buttonHandler(this)" name="TUNER">Tuner</button>
-            <button class="input" onclick="buttonHandler(this)" name="PHONO">Phono</button> -->
+            <button class="input mdi mdi-television-classic" name="LINE1">TV</button>
+            <!-- <button class="input" name="LINE2">Line 2</button>
+            <button class="input" name="LINE3">Line 3</button> -->
+            <button class="input mdi mdi-disc" name="CD">CD</button>
+            <button class="input mdi mdi-google-chrome" name="OPTICAL"> Chromecast </button>
+            <!-- <button class="input" name="COAXIAL">Coaxial</button>
+            <button class="input" name="TUNER">Tuner</button>
+            <button class="input" name="PHONO">Phono</button> -->
         </div>
         <div class="cd container">
             <h3>CD</h3>
-            <!-- <button class="cd" onclick="buttonHandler(this)" name="CD_POWER">CD Power</button> -->
+            <!-- <button class="cd" name="CD_POWER">CD Power</button> -->
             <div class="cdcontrols">
-                <button class="cd mdi mdi-play" onclick="buttonHandler(this)" name="PLAY"></button>
-                <button class="cd mdi mdi-pause" onclick="buttonHandler(this)" name="PAUSE"></button>
-                <button class="cd mdi mdi-stop" onclick="buttonHandler(this)" name="STOP"></button>
+                <button class="cd mdi mdi-play" name="PLAY"></button>
+                <button class="cd mdi mdi-pause" name="PAUSE"></button>
+                <button class="cd mdi mdi-stop" name="STOP"></button>
             </div>
             <div class="cdcontrols">
-                <button class="cd mdi mdi-skip-backward" onclick="buttonHandler(this)" name="PREV"></button>
-                <button class="cd mdi mdi-rewind" ontouchstart="holdHandler(this, true)" ontouchend="holdHandler(this, false)" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)"name="REWIND"></button>
-                <button class="cd mdi mdi-fast-forward" ontouchstart="holdHandler(this, true)" ontouchend="holdHandler(this, false)" onmousedown="holdHandler(this, true)" onmouseup="holdHandler(this, false)"name="FORWARD"></button>
-                <button class="cd mdi mdi-skip-forward" onclick="buttonHandler(this)" name="NEXT"></button>
+                <button class="cd mdi mdi-skip-backward" name="PREV"></button>
+                <button class="cd mdi mdi-rewind holdevent"name="REWIND"></button>
+                <button class="cd mdi mdi-fast-forward holdevent"name="FORWARD"></button>
+                <button class="cd mdi mdi-skip-forward" name="NEXT"></button>
             </div>
         </div>
         <div class="tv container">
             <h3>TV</h3>
-            <button class="tv mdi mdi-menu" onclick="buttonHandler(this)" name="SONY_ACTIONMENU">ActionMenu</button>            
-            <button class="tv mdi mdi-import" onclick="buttonHandler(this)" name="SONY_INPUT">Input</button>
+            <button class="tv mdi mdi-menu" name="SONY_ACTIONMENU">ActionMenu</button>            
+            <button class="tv mdi mdi-import" name="SONY_INPUT">Input</button>
                 <div class="row">
-                    <div class="column"><button class="tv small mdi mdi-undo" onclick="buttonHandler(this)" name="SONY_BACK"></button></div>
-                    <div class="column"><button class="tv small mdi mdi-menu-up" onclick="buttonHandler(this)" name="SONY_UP"></button></div>
-                    <div class="column"><button class="tv small mdi mdi-home" onclick="buttonHandler(this)" name="SONY_HOME"></button></div>
+                    <div class="column"><button class="tv small mdi mdi-undo" name="SONY_BACK"></button></div>
+                    <div class="column"><button class="tv small mdi mdi-menu-up" name="SONY_UP"></button></div>
+                    <div class="column"><button class="tv small mdi mdi-home" name="SONY_HOME"></button></div>
                 </div>
                 <div class="row">
-                    <div class="column"><button class="tv small mdi mdi-menu-left" onclick="buttonHandler(this)" name="SONY_LEFT"></button></div>
-                    <div class="column"><button class="tv small" onclick="buttonHandler(this)" name="SONY_OK">OK</button></div>
-                    <div class="column"><button class="tv small mdi mdi-menu-right" onclick="buttonHandler(this)" name="SONY_RIGHT"></button></div>
+                    <div class="column"><button class="tv small mdi mdi-menu-left" name="SONY_LEFT"></button></div>
+                    <div class="column"><button class="tv small" name="SONY_OK">OK</button></div>
+                    <div class="column"><button class="tv small mdi mdi-menu-right" name="SONY_RIGHT"></button></div>
                 </div>
                 <div class="row">
-                    <div class="column"><button class="tv small mdi mdi-skip-backward" onclick="buttonHandler(this)" name="SONY_PREVIOUS" ></button></div>
-                    <div class="column"><button class="tv small mdi mdi-menu-down" onclick="buttonHandler(this)" name="SONY_DOWN"></button></div>
-                    <div class="column"><button class="tv small mdi mdi-skip-forward" onclick="buttonHandler(this)" name="SONY_NEXT"></button></div>
+                    <div class="column"><button class="tv small mdi mdi-skip-backward" name="SONY_PREVIOUS" ></button></div>
+                    <div class="column"><button class="tv small mdi mdi-menu-down" name="SONY_DOWN"></button></div>
+                    <div class="column"><button class="tv small mdi mdi-skip-forward" name="SONY_NEXT"></button></div>
                 </div>
                 
                 
@@ -72,8 +72,8 @@
         </div>
         <div class="power container">
             <h3>Power</h3>
-            <button class="power mdi mdi-power-standby" onclick="buttonHandler(this)" name="STANDBY">Amplifier</button>
-            <button class="power mdi mdi-power-standby" onclick="buttonHandler(this)" name="SONY_POWER">TV</button>
+            <button class="power mdi mdi-power-standby" name="STANDBY">Amplifier</button>
+            <button class="power mdi mdi-power-standby" name="SONY_POWER">TV</button>
         </div>
 
     </div>
@@ -83,30 +83,45 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>    
-    window.oncontextmenu = function(event) {
-        event.preventDefault();
-        event.stopPropagation();
-        return false;
-    };
-
-    // const baseRemoteAPIURL = "http://localhost/"
-    function buttonHandler(e) {
-        axios.get("/remote/" + e.name + "/click").then(response => {
-            console.log(response);
-        }).catch(e => {
-            console.log(e);
-        })
+    let buttons = document.getElementsByTagName("button");
+    for(i = 0; i < buttons.length; i++) {
+        // buttons[i].addEventListener("click", function(e) {
+        //     console.log("Clicked")
+        // });
+        if(buttons[i].classList.contains("holdevent")) {
+            buttons[i].addEventListener("mousedown", (e) => holdHandler(e));
+            buttons[i].addEventListener("mouseup", (e) => holdHandler(e));
+            buttons[i].addEventListener("touchstart", (e) => holdHandler(e));
+            buttons[i].addEventListener("touchend", (e) => holdHandler(e));
+        } else {
+            buttons[i].addEventListener("click", (e) => buttonHandler(e));
+        }
+        
     }
-
-    function holdHandler(e, toggle) {
-        e.preventDefault();
-        console.log("HOLDHANDLER")
-        console.log("/remote/" + e.name + (toggle ? "/start" : "/stop"))
-
-        axios.get("/remote/" + e.name + (toggle ? "/start" : "/stop")).then(response => {
+    function holdHandler(e) {
+        if (e.type === "mousedown" || e.type === "touchstart") toggle = true; else toggle = false;
+        console.log("Calling /remote/" + e.currentTarget.name + (toggle ? "/start" : "/stop"))
+        axios.get("/remote/" + e.currentTarget.name + (toggle ? "/start" : "/stop")).then(response => {
         console.log(response);
         }).catch(e => {
             console.log(e);
         })
     }
+
+    function buttonHandler(e) {
+        // Send click event
+        console.log(`Clicking ${e.currentTarget.name}`)
+        axios.get("/remote/" + e.currentTarget.name + "/click").then(response => {
+            console.log(response);
+        }).catch(e => {
+            console.log(e);
+        })
+        
+    }
+
+    window.oncontextmenu = function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        return false;
+    };
 </script> 
