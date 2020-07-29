@@ -20,7 +20,7 @@ app.get('/payload', function (req, res) {
 app.post('/payload', function (req, res) {
 	//verify that the payload is a push from the correct repo
 	//verify repository.name == 'wackcoon-device' or repository.full_name = 'DanielEgan/wackcoon-device'
-	if(!req.repository.full_name === REPOSITORY_FULLNAME) {
+	if(!req.body.repository.full_name === REPOSITORY_FULLNAME) {
 		res.status(403).send("Wrong repo.");
 		return;
 	}
