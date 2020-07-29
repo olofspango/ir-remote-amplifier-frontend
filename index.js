@@ -1,4 +1,7 @@
 const express = require('express');
+const https = require('https')
+const fs = require('fs')
+
 const app = express();
 const bodyParser = require('body-parser');
 const querystring = require('querystring');
@@ -23,6 +26,9 @@ app.get('/remote/:command/:repeat', (req,res) => {
 
 })
 
-app.listen(8080, () => {
-    console.log("Listening on port 8080");
+https.createServer({
+  key: fs.readFileSync('server.key'),
+  cert: fs.readFileSync('server.cert')
+}, app).listen(8080, () => {
+  console.log("Listening on port 8080");
 });
