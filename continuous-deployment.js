@@ -37,6 +37,7 @@ app.post('/payload', function (req, res) {
 
 	// and run tsc
 	exec(`pm2 restart ${PM2_PROJECT_NAME}`, execCallback);
+        res.send("OK!")
 });
 
 app.listen(5000, function () {
