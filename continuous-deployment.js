@@ -1,11 +1,12 @@
-
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 var exec = require('child_process').exec;
 
 const PM2_PROJECT_NAME = "remote-frontend"
+const PM2_CONT_DEPLOY_NAME = "Cont-Deploy"
 const PROJECT_PATH = "~/ir-remote-amplifier-frontend/"
+const REPOSITORY_FULLNAME = process.env.REMOTE_FRONTEND_REPOSITORY_NAME
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -19,6 +20,12 @@ app.get('/payload', function (req, res) {
 app.post('/payload', function (req, res) {
 	//verify that the payload is a push from the correct repo
 	//verify repository.name == 'wackcoon-device' or repository.full_name = 'DanielEgan/wackcoon-device'
+	if(!req.repository.full_name === REPOSITORY_FULLNAME) {
+		res.status(403).send("Wrong repo.");
+		return;
+	}
+	
+
 	console.log(req.body.pusher.name + ' just pushed to ' + req.body.repository.name);
 
 	console.log('pulling code from GitHub...');
@@ -37,7 +44,8 @@ app.post('/payload', function (req, res) {
 
 	// and run tsc
 	exec(`pm2 restart ${PM2_PROJECT_NAME}`, execCallback);
-        res.send("OK!")
+	res.send("OK!")
+	exec(`pm2 restart ${PM2_CONT_DEPLOY_NAME}`, execCallback)
 });
 
 app.listen(5000, function () {
