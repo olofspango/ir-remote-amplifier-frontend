@@ -1,5 +1,6 @@
 const express = require('express');
 const https = require('https')
+const http = require('http')
 const fs = require('fs')
 
 const app = express();
@@ -25,10 +26,13 @@ app.get('/remote/:command/:repeat', (req,res) => {
     });
 
 })
+http.createSever(app).listen(8080, () => {
+  console.log("http listening on port 8080");
+}
 
 https.createServer({
   key: fs.readFileSync('server.key'),
   cert: fs.readFileSync('server.cert')
-}, app).listen(8080, () => {
-  console.log("Listening on port 8080");
+}, app).listen(8443, () => {
+  console.log("Listening on port 8443");
 });
