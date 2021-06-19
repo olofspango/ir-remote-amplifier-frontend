@@ -26,9 +26,9 @@ app.get('/remote/:command/:repeat', (req,res) => {
     });
 
 })
-http.createSever(app).listen(8080, () => {
+http.createServer(app).listen(8080, () => {
   console.log("http listening on port 8080");
-}
+})
 
 https.createServer({
   key: fs.readFileSync('server.key'),
