@@ -80,7 +80,7 @@
 
 </body>
 </html>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
 
 <script>    
     let buttons = document.getElementsByTagName("button");
@@ -101,7 +101,8 @@
     function holdHandler(e) {
         if (e.type === "mousedown" || e.type === "touchstart") toggle = true; else toggle = false;
         console.log("Calling /remote/" + e.currentTarget.name + (toggle ? "/start" : "/stop"))
-        axios.get("/remote/" + e.currentTarget.name + (toggle ? "/start" : "/stop")).then(response => {
+        fetch("/remote/" + e.currentTarget.name + (toggle ? "/start" : "/stop")).then(response => { 
+        // axios.get("/remote/" + e.currentTarget.name + (toggle ? "/start" : "/stop")).then(response => {
         console.log(response);
         }).catch(e => {
             console.log(e);
@@ -111,7 +112,8 @@
     function buttonHandler(e) {
         // Send click event
         console.log(`Clicking ${e.currentTarget.name}`)
-        axios.get("/remote/" + e.currentTarget.name + "/click").then(response => {
+        fetch("/remote/" + e.currentTarget.name + "/click").then(response => {
+       // axios.get("/remote/" + e.currentTarget.name + "/click").then(response => {
             console.log(response);
         }).catch(e => {
             console.log(e);

@@ -17,7 +17,9 @@ app.use(cors());
 const remoteAPIURL = "http://localhost:5002/remote/"
 
 app.get('/remote/:command/:repeat', (req,res) => {
-    axios.get(remoteAPIURL + req.params.command + "/" + req.params.repeat).then(response => {
+//    let promise = fetch(remoteAPIRUL + req.params.command + "/" + req.params.repeat);
+//    promise.then(response => {
+      axios.get(remoteAPIURL + req.params.command + "/" + req.params.repeat).then(response => { // Commented out this line to test using fetch instead of axios
         console.log(`Sending command: ${req.params.command}`)
         res.send(response);
     })
